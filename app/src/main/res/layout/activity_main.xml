@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="course.examples.doodler.MainActivity">
+
+    <course.examples.doodler.DoodleView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/doodleView" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/doodleView"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Color:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/colorTextView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <SeekBar
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/colorSeekBar"
+            android:max="360"
+            android:layout_below="@+id/colorTextView"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Opacity:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/opacityTextBar"
+            android:layout_below="@+id/colorSeekBar"
+            android:layout_alignParentStart="true" />
+
+        <SeekBar
+            android:id="@+id/opacitySeekBar"
+            android:max="255"
+            android:progress="255"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/opacityTextBar"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:text="Clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clearButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text="Brush Size:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/brushSizeTextView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <SeekBar
+            android:layout_height="wrap_content"
+            android:id="@+id/brushSizeSeekBar"
+            android:max="150"
+            android:layout_width="150dp"
+            android:layout_below="@+id/brushSizeTextView"
+            android:layout_alignParentEnd="true" />
+
+        <SeekBar
+            android:layout_height="wrap_content"
+            android:id="@+id/saturationSeekBar"
+            android:max="100"
+            android:progress="100"
+            android:layout_width="150dp"
+            android:layout_below="@+id/saturationTextView"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text="Saturation:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/saturationTextView"
+            android:layout_below="@+id/brushSizeSeekBar"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="ERASER"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/eraserButton" />
+
+        <Button
+            android:text="FILL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/fillButton" />
+    </RelativeLayout>
+
+</RelativeLayout>
